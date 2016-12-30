@@ -1,2 +1,14 @@
 Port scan using connect function. 
 Usage : p.exe IP startport endport
+vs2010
+windows8
+
+questions:
+Converting _TCHAR* to char*
+The quickest solution is to just change the signature to the standard one. Replace:
+int _tmain( int argc, _TCHAR* argv[] )
+With
+int main( int argc, char *argv[] )
+This does mean on Windows that the command line arguments get converted to the system's 
+locale encoding and since Windows doesn't support UTF-8 here not everything converts correctly. 
+However unless you actually need internationalization then it may not be worth your time to do anything more.
