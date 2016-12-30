@@ -1,0 +1,2 @@
+Port scan using connect function. 
+Usage : p.exe IP startport endport
